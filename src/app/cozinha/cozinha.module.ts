@@ -10,6 +10,8 @@ import { CozinhaFrmComponent } from './cozinha-frm/cozinha-frm.component';
   imports: [
     CommonModule,
     CozinhaRoutingModule
+  ], exports: [
+    CozinhaFrmComponent
   ]
 })
 export class CozinhaModule { }
