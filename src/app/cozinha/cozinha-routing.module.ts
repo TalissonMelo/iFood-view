@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CozinhaFrmComponent } from './cozinha-frm/cozinha-frm.component';
+import { CozinhaComponent } from './cozinha/cozinha.component';
 
 
 const routes: Routes = [
-  {path: "cozinha-frm", component : CozinhaFrmComponent}
+  {path: "cozinha-frm", component : CozinhaFrmComponent},
+  {path: "cozinha", component: CozinhaComponent}
 ];
 
 @NgModule({

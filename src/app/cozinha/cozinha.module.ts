@@ -3,15 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { CozinhaRoutingModule } from './cozinha-routing.module';
 import { CozinhaFrmComponent } from './cozinha-frm/cozinha-frm.component';
+import { CozinhaComponent } from './cozinha/cozinha.component';
 
 
 @NgModule({
-  declarations: [CozinhaFrmComponent],
+  declarations: [CozinhaFrmComponent, CozinhaComponent],
   imports: [
     CommonModule,
     CozinhaRoutingModule
   ], exports: [
-    CozinhaFrmComponent
+    CozinhaFrmComponent, 
+    CozinhaComponent
   ]
 })
 export class CozinhaModule { }
