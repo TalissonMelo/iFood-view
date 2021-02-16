@@ -5,8 +5,8 @@ import { CozinhaComponent } from './cozinha/cozinha.component';
 
 
 const routes: Routes = [
+  {path: "cozinha", component: CozinhaComponent},
   {path: "cozinha-frm", component : CozinhaFrmComponent},
-  {path: "cozinha", component: CozinhaComponent}
 ];
 
 @NgModule({

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component'
 import { CozinhaModule } from './cozinha/cozinha.module';
+import { CidadeModule } from './cidade/cidade.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CozinhaModule } from './cozinha/cozinha.module';
     BrowserModule,
     AppRoutingModule,
     TemplateModule,
-    CozinhaModule
+    CozinhaModule,
+    CidadeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
