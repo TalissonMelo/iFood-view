@@ -11,6 +11,7 @@ import { CidadeModule } from './cidade/cidade.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 import { PermissaoModule } from './permissao/permissao.module';
+import { ProdutoModule } from './produto/produto.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PermissaoModule } from './permissao/permissao.module';
     CidadeModule,
     RestauranteModule,
     FormaPagamentoModule,
-    PermissaoModule
+    PermissaoModule,
+    ProdutoModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
