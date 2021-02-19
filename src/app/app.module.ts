@@ -12,6 +12,7 @@ import { RestauranteModule } from './restaurante/restaurante.module';
 import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 import { PermissaoModule } from './permissao/permissao.module';
 import { ProdutoModule } from './produto/produto.module';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ProdutoModule } from './produto/produto.module';
     FormaPagamentoModule,
     PermissaoModule,
     ProdutoModule,
+    UsuarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
