@@ -10,6 +10,7 @@ import { CozinhaModule } from './cozinha/cozinha.module';
 import { CidadeModule } from './cidade/cidade.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
+import { PermissaoModule } from './permissao/permissao.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
     CozinhaModule,
     CidadeModule,
     RestauranteModule,
-    FormaPagamentoModule
+    FormaPagamentoModule,
+    PermissaoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
