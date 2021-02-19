@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component'
 import { CozinhaModule } from './cozinha/cozinha.module';
 import { CidadeModule } from './cidade/cidade.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
+import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RestauranteModule } from './restaurante/restaurante.module';
     CozinhaModule,
     CidadeModule,
     RestauranteModule,
+    FormaPagamentoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
