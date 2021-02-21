@@ -13,6 +13,7 @@ import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 import { PermissaoModule } from './permissao/permissao.module';
 import { ProdutoModule } from './produto/produto.module';
 import { UsuarioModule } from './usuario/usuario.module';
+import { GrupoModule } from './grupo/grupo.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UsuarioModule } from './usuario/usuario.module';
     FormaPagamentoModule,
     PermissaoModule,
     ProdutoModule,
-    UsuarioModule
+    UsuarioModule,
+    GrupoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PermissaoComponent } from './permissao/permissao.component';
 import { PermissaoFrmComponent } from './permissao-frm/permissao-frm.component';
-import { PermissaoRoutingModule } from './permissao.routing.module';
+import { PermissaoRoutingModule } from './permissao-routing.module';
 
 @NgModule({
   declarations: [PermissaoComponent, PermissaoFrmComponent],

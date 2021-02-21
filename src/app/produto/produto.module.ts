@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoFrmComponent } from './produto-frm/produto-frm.component';
-import { ProdutoRoutingModule } from './produto.module.routing';
+import { ProdutoRoutingModule } from './produto-routing.module';
 
 @NgModule({
   declarations: [ProdutoComponent, ProdutoFrmComponent],
