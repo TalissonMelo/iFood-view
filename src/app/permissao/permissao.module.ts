@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { PermissaoComponent } from './permissao/permissao.component';
 import { PermissaoFrmComponent } from './permissao-frm/permissao-frm.component';
 import { PermissaoRoutingModule } from './permissao-routing.module';
+import { TemplateModule } from '../template/template.module';
 
 @NgModule({
   declarations: [PermissaoComponent, PermissaoFrmComponent],
   imports: [
     CommonModule,
-    PermissaoRoutingModule
+    PermissaoRoutingModule,
+    TemplateModule
   ],exports: [
     PermissaoComponent,
     PermissaoFrmComponent

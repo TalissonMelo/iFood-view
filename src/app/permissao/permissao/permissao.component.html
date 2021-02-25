@@ -1,1 +1,26 @@
-<p>permissao works!</p>
+<nav class="nav nav-pills nav-fill">
+    <h1>Permissões</h1>
+    <div class="input-group">
+        <button type="button" class="btn btn-dark mr-2">Listar Permissões</button>
+        <button type="button" class="btn btn-success" [routerLink]="['/permissao-frm']">Cadastrar Permissões</button>
+    </div>
+  </nav>
+<table class="table mt-1">
+    <thead class="thead-dark">
+      <tr class="row">
+        <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Nome</th>
+        <th class="col-xs-7 col-sm-7 col-md-7 col-lg-7">Descrição</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Editar</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Deletar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr class="row">
+        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">CONSULTAR_COZINHAS</td>
+        <td class="col-xs-7 col-sm-7 col-md-7 col-lg-7">Permite consultar cozinhas</td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-edit"></i> Editar </a></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-trash"></i> Deletar </a></td>
+    </tr>
+    </tbody>
+</table>
+<app-paginacao></app-paginacao>
