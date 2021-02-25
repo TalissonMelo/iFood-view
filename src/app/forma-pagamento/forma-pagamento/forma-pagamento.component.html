@@ -1,1 +1,24 @@
-<p>forma-pagamento works!</p>
+<nav class="nav nav-pills nav-fill">
+    <h1>Forma Pagamento</h1>
+    <div class="input-group">
+        <button type="button" class="btn btn-dark mr-2">Listar Formas Pagamentos</button>
+        <button type="button" class="btn btn-success" [routerLink]="['/forma-pagamento-frm']">Cadastrar Formas Pagamentos</button>
+    </div>
+  </nav>
+<table class="table mt-1">
+    <thead class="thead-dark">
+      <tr class="row">
+        <th class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Nome</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Editar</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Deletar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr class="row">
+        <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Cartão de crédito</td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-edit"></i> Editar </a></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-trash"></i> Deletar </a></td>
+    </tr>
+    </tbody>
+</table>
+<app-paginacao></app-paginacao>

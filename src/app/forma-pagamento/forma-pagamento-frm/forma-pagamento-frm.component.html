@@ -1,1 +1,13 @@
-<p>forma-pagamento-frm works!</p>
+<nav class="nav nav-pills nav-fill border-bottom dark">
+    <h1>Cadastrar Forma Pagamento</h1>
+    <div class="input-group">
+        <button type="button" class="btn btn-dark mr-2" [routerLink]="['/cozinha']">Listar Formas Pagamentos</button>
+    </div>
+</nav>
+<form class="mt-1">
+    <div class="form-group">
+      <label for="nome">Descrição</label>
+      <input type="text" class="form-control" id="descricao" placeholder="Digite o nome da forma de pagamento">
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
