@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PermissaoModule } from './permissao/permissao.module';
 import { ProdutoModule } from './produto/produto.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
+import { CidadeService } from './service/cidade.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 
@@ -33,7 +34,7 @@ import { UsuarioModule } from './usuario/usuario.module';
     UsuarioModule,
     GrupoModule
   ],
-  providers: [],
+  providers: [CidadeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
