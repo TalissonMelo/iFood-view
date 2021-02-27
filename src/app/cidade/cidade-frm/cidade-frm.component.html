@@ -1,9 +1,7 @@
-<nav class="nav nav-pills nav-fill border-bottom dark">
-    <h1>Cadastro de Cidade</h1>
-    <div class="input-group">
-        <button type="button" class="btn btn-dark mr-2" [routerLink]="['/cidade']">Listar Cidades</button>
-    </div>
-</nav>
+<h1 class="mt-4">Cidades</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item">Cadastro</li>
+</ol>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Nome</label>
@@ -17,5 +15,6 @@
         <option>SÃO PAULO</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Cadastrar</button>
+    <button type="button" class="btn btn-dark ml-2" [routerLink]="['/cidade']">Listar Cidades</button>
 </form>

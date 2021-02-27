@@ -1,13 +1,12 @@
-<nav class="nav nav-pills nav-fill border-bottom dark">
-    <h1>Cadastrar de Cozinha</h1>
-    <div class="input-group">
-        <button type="button" class="btn btn-dark mr-2" [routerLink]="['/cozinha']">Listar Cozinha</button>
-    </div>
-</nav>
+<h1 class="mt-4">Cozinha</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item">Cadastro</li>
+</ol>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Nome</label>
       <input type="text" class="form-control" id="nome" placeholder="Digite o nome da cozinha">
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Cadastrar</button>
+    <button type="button" class="btn btn-dark ml-2" [routerLink]="['/cozinha']">Listar Cozinha</button>
 </form>
