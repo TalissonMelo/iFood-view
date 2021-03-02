@@ -11,6 +11,7 @@ import { PermissaoModule } from './permissao/permissao.module';
 import { ProdutoModule } from './produto/produto.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { CidadeService } from './service/cidade.service';
+import { CozinhaService } from './service/cozinha.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 
@@ -34,7 +35,10 @@ import { UsuarioModule } from './usuario/usuario.module';
     UsuarioModule,
     GrupoModule
   ],
-  providers: [CidadeService],
+  providers: [
+    CidadeService, 
+    CozinhaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

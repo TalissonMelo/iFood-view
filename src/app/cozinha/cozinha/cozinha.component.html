@@ -1,21 +1,21 @@
 <nav class="nav nav-pills nav-fill">
     <h1>Cozinha</h1>
     <div class="input-group">
-        <button type="button" class="btn btn-primary mr-2">Listar Cozinhas</button>
+        <button type="button" class="btn btn-primary mr-2" (click)="listar()" >Listar Cozinhas</button>
         <button type="button" class="btn btn-success" [routerLink]="['/cozinha-frm']"><i class="fa fa-save"></i> Cadastrar Cidades</button>
     </div>
   </nav>
 <table class="table mt-1">
     <thead class="thead-dark">
-      <tr class="row">
+      <tr class="row" >
         <th class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Nome</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Editar</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Deletar</th>
     </tr>
     </thead>
     <tbody>
-      <tr class="row">
-        <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Culinária da Índia</td>
+      <tr class="row" *ngFor="let cozinha of cozinhas">
+        <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">{{ cozinha.nome }}</td>
         <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-edit"></i> Editar </a></td>
         <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-trash"></i> Deletar </a></td>
     </tr>
