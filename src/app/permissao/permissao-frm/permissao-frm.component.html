@@ -2,15 +2,27 @@
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item">Cadastro</li>
 </ol>
+<div *ngIf="validaPermissao == false" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Permissao e Obrigatório, deve conter no mínimo 5 caracteres.</strong> Descrição e Obrigatório.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div *ngIf="validaPermissao == true" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Permissão cadastrada com sucesso.</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome" placeholder="Digite o nome da permissao">
+      <input type="text" class="form-control" id="nome" placeholder="Digite o nome da permissao" [(ngModel)]="permissao.nome" name="nome">
     </div>
     <div class="form-group">
         <label for="nome">Descrição</label>
-        <input type="text" class="form-control" id="descricao" placeholder="Digite uma descrição">
+        <textarea  rows="5" class="form-control" id="descricao" placeholder="Digite uma descrição" [(ngModel)]="permissao.descricao" name="descricao"></textarea>
       </div>
-    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Cadastrar</button>
+    <button type="submit" class="btn btn-success" (click)="salvar()"><i class="fa fa-save"></i> Cadastrar</button>
     <button type="button" class="btn btn-dark ml-2" [routerLink]="['/permissao']">Listar Permissao</button>
 </form>

@@ -12,6 +12,7 @@ import { ProdutoModule } from './produto/produto.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { CidadeService } from './service/cidade.service';
 import { CozinhaService } from './service/cozinha.service';
+import { PermissaoService } from './service/permissao.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 
@@ -37,7 +38,8 @@ import { UsuarioModule } from './usuario/usuario.module';
   ],
   providers: [
     CidadeService, 
-    CozinhaService
+    CozinhaService,
+    PermissaoService
   ],
   bootstrap: [AppComponent]
 })
