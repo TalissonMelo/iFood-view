@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Cozinha } from '../entidades/cozinha';
 
 @Injectable({
@@ -6,14 +8,9 @@ import { Cozinha } from '../entidades/cozinha';
 })
 export class CozinhaService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  cozinhas(): Cozinha[] {
-    let cozinhas: Cozinha[] = [];
-    let cozinha: Cozinha = new Cozinha();
-    cozinha.nome = "Brasileira";
-    cozinha.id = 1
-    cozinhas.push(cozinha);
-    return cozinhas;
+  listar(): Observable<Cozinha[]> {
+    return this.http.get<Cozinha[]>('http://localhost:8080/cozinhas');
   }
 }

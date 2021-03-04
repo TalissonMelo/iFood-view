@@ -15,7 +15,7 @@ export class CozinhaComponent implements OnInit {
   }
 
   listar(): void {
-    this.cozinhas = this.service.cozinhas();
+    this.service.listar().subscribe(res => this.cozinhas = res)
   }
 
 }

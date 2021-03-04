@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,8 +17,6 @@ import { PermissaoService } from './service/permissao.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +24,7 @@ import { UsuarioModule } from './usuario/usuario.module';
     ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     TemplateModule,
     CozinhaModule,
