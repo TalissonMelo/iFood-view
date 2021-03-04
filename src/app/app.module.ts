@@ -8,6 +8,7 @@ import { CozinhaModule } from './cozinha/cozinha.module';
 import { FormaPagamentoModule } from './forma-pagamento/forma-pagamento.module';
 import { GrupoModule } from './grupo/grupo.module';
 import { HomeComponent } from './home/home.component';
+import { PedidoModule } from './pedido/pedido.module';
 import { PermissaoModule } from './permissao/permissao.module';
 import { ProdutoModule } from './produto/produto.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
@@ -34,7 +35,8 @@ import { UsuarioModule } from './usuario/usuario.module';
     PermissaoModule,
     ProdutoModule,
     UsuarioModule,
-    GrupoModule
+    GrupoModule,
+    PedidoModule
   ],
   providers: [
     CidadeService, 
