@@ -8,6 +8,8 @@ import { Permissao } from 'src/app/entidades/permissao';
 export class PermissaoFrmComponent implements OnInit {
   public permissao: Permissao;
   public validaPermissao: boolean;
+  public sucesso: string = "Permissão cadastrada com sucesso.";
+  public erro: string = "Permissao e Obrigatório, deve conter no mínimo 5 caracteres. Descrição e Obrigatório.";
   
   constructor() { 
     this.permissao = new Permissao();
@@ -18,7 +20,6 @@ export class PermissaoFrmComponent implements OnInit {
 
   salvar() : void {
     if(this.validarPermissao()){
-      console.log(this.permissao)
       this.validaPermissao = true;
     }
   }

@@ -2,11 +2,12 @@
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item">Cadastro</li>
 </ol>
+<app-mensagem-validacao [validacao]="validaFormaPagamento" [sucesso]="sucesso"  [erro]="erro"></app-mensagem-validacao>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Descrição</label>
-      <input type="text" class="form-control" id="descricao" placeholder="Digite o nome da forma de pagamento">
+      <input type="text" class="form-control" id="descricao" placeholder="Digite o nome da forma de pagamento" [(ngModel)]="formaPagamento.descricao" name="descricao">
     </div>
-    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Cadastrar</button>
+    <button type="submit" class="btn btn-success" (click)="salvar()" ><i class="fa fa-save"></i> Cadastrar</button>
     <button type="button" class="btn btn-dark ml-2" [routerLink]="['/forma-pagamento']">Listar Formas Pagamentos</button>
 </form>

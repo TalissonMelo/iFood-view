@@ -4,11 +4,16 @@ import { CidadeComponent } from './cidade/cidade.component';
 import { CidadeFrmComponent } from './cidade-frm/cidade-frm.component';
 import { CidadeRoutingModule } from './cidade-routing.module';
 import { TemplateModule } from '../template/template.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [CidadeComponent, CidadeFrmComponent],
+  declarations: [
+    CidadeComponent,
+    CidadeFrmComponent
+    ],
   imports: [
     CommonModule,
+    FormsModule,
     CidadeRoutingModule,
     TemplateModule
   ], exports : [

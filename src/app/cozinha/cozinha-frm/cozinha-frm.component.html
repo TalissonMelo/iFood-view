@@ -2,18 +2,7 @@
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item">Cadastro</li>
 </ol>
-<div *ngIf="validaCozinha == false" class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Nome e Obrigatório, deve conter no mínimo 5 caracteres.</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div *ngIf="validaCozinha == true" class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong> Cozinha cadastrada com sucesso.</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+<app-mensagem-validacao [validacao]="validaCozinha" [sucesso]="sucesso"  [erro]="erro"></app-mensagem-validacao>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Nome</label>

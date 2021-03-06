@@ -8,6 +8,8 @@ import { Cozinha } from 'src/app/entidades/cozinha';
 export class CozinhaFrmComponent implements OnInit {
   public cozinha: Cozinha;
   public validaCozinha: boolean;
+  public sucesso: string = "Cozinha cadastrada com sucesso.";
+  public erro: string = "Nome e Obrigatório, deve conter no mínimo 5 caracteres."
 
   constructor() { 
     this.cozinha = new Cozinha();
@@ -19,7 +21,6 @@ export class CozinhaFrmComponent implements OnInit {
   salvar(): void {
     if(this.validarCozinha()){
       this.validaCozinha = true;
-      console.log(this.cozinha);
     }
   }
 

@@ -2,10 +2,11 @@
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item">Cadastro</li>
 </ol>
+<app-mensagem-validacao [validacao]="validarCidade" [sucesso]="sucesso"  [erro]="erro"></app-mensagem-validacao>
 <form class="mt-1">
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome" placeholder="Digite o nome da cidade">
+      <input type="text" class="form-control" id="nome" placeholder="Digite o nome da cidade" [(ngModel)]="cidade.nome" name="nome">
     </div>
     <div class="form-group">
       <label for="Estado">Estado</label>
@@ -15,6 +16,6 @@
         <option>SÃO PAULO</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Cadastrar</button>
+    <button type="submit" class="btn btn-success" (click)="salvar()"><i class="fa fa-save"></i> Cadastrar</button>
     <button type="button" class="btn btn-dark ml-2" [routerLink]="['/cidade']">Listar Cidades</button>
 </form>
