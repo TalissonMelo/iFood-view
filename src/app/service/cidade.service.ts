@@ -14,4 +14,8 @@ export class CidadeService {
   listar(): Observable<Cidade[]> {
     return this.http.get<Cidade[]>(`${environment.uri}/cidades`);
   }
+
+  listarCidadeId(id:number): Observable<Cidade> {
+    return this.http.get<Cidade>(`${environment.uri}/cidades/${id}`);
+  }
 }

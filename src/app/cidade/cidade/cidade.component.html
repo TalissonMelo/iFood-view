@@ -1,27 +1,23 @@
 <nav class="nav nav-pills nav-fill">
     <h1>Cidades</h1>
     <div class="input-group">
-        <button type="button" class="btn btn-primary mr-2" (click)="listar()">Listar Cidades</button>
+        <button type="button" class="btn btn-primary mr-2" (click)="listar()"><i class="fas fa-table"></i> Listar Cidades</button>
         <button type="button" class="btn btn-success" [routerLink]="['/cidade-frm']"><i class="fa fa-save"></i> Cadastrar Cidades</button>
     </div>
   </nav>
 <table class="table mt-1">
     <thead class="thead-dark">
       <tr class="row">
-        <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">Cidade</th>
-        <th class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Estado</th>
-        <th class="col-xs-2 col-sm-2 col-md-2 col-lg-2">UF</th>
+        <th class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Cidade</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Editar</th>
         <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Deletar</th>
     </tr>
     </thead>
     <tbody>
       <tr class="row" *ngFor="let cidade of cidades">
-        <td class="col-xs-5 col-sm-5 col-md-5 col-lg-5">{{ cidade.nome }}</td>
-        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">{{ cidade.estado.nome }}</td>
-        <td class="col-xs-2 col-sm-2 col-md-2 col-lg-2">{{ cidade.estado.uf }}</td>
-        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-edit"></i> Editar </a></td>
-        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><a href="#"><i class="fas fa-trash"></i> Deletar </a></td>
+        <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">{{ cidade.nome }}</td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning" routerLink="/cidade-frm/{{cidade.id}}"><i class="fas fa-edit"></i></button></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
     </tr>
     </tbody>
 </table>

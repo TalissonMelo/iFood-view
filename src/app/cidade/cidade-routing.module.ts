@@ -6,7 +6,9 @@ import { CidadeComponent } from './cidade/cidade.component';
 
 const routes: Routes = [
   {path: "cidade", component: CidadeComponent},
-  {path: "cidade-frm", component: CidadeFrmComponent}
+  {path: "cidade-frm", component: CidadeFrmComponent},
+  {path: "cidade-frm/:id", component: CidadeFrmComponent}
+
 ];
 
 @NgModule({
