@@ -17,11 +17,13 @@ import { CozinhaService } from './service/cozinha.service';
 import { PermissaoService } from './service/permissao.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
     ],
   imports: [
     BrowserModule,
