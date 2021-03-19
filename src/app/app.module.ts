@@ -18,12 +18,14 @@ import { PermissaoService } from './service/permissao.service';
 import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    LayoutComponent
     ],
   imports: [
     BrowserModule,
