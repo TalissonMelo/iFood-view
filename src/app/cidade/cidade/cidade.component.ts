@@ -8,6 +8,7 @@ import { CidadeService } from 'src/app/service/cidade.service';
 })
 export class CidadeComponent implements OnInit {
   public cidades: Cidade[] = [];
+  public cidade: Cidade;
 
   constructor(private service: CidadeService) { }
 
@@ -18,4 +19,7 @@ export class CidadeComponent implements OnInit {
     this.service.listar().subscribe((res) => this.cidades = res);
   }
 
+  preparaDelecao(cidade : Cidade){
+    this.cidade = cidade;
+  }
 }
