@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { PaginacaoComponent } from './paginacao/paginacao.component';
 import { MensagemValidacaoComponent } from './mensagem-validacao/mensagem-validacao.component';
+import { ModalDelecaoComponent } from './modal-delecao/modal-delecao.component';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { MensagemValidacaoComponent } from './mensagem-validacao/mensagem-valida
     SidebarComponent,
     PaginacaoComponent,
     MensagemValidacaoComponent,
+    ModalDelecaoComponent,
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { MensagemValidacaoComponent } from './mensagem-validacao/mensagem-valida
     NavbarComponent,
     SidebarComponent,
     PaginacaoComponent,
-    MensagemValidacaoComponent
+    MensagemValidacaoComponent,
+    ModalDelecaoComponent
   ]
 })
 export class TemplateModule { }

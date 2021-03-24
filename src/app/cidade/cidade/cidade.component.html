@@ -1,20 +1,5 @@
 <nav class="nav nav-pills nav-fill">
-  <div id="modalDelecao" class="modal fade" role="document">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirmar Deleção</h5>
-        </div>
-        <div class="modal-body" *ngIf="cidade">
-          <p>Realmente deseja deletar a cidade de: <strong>{{ cidade.nome }} ? </strong> </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success"><i class="fas fa-trash"></i> Confirmar</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-arrow-alt-circle-left"></i> Cancelar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-modal-delecao [objeto]="cidade"></app-modal-delecao>
   <h1>Cidades</h1>
   <div class="input-group">
     <button type="button" class="btn btn-primary mr-2" (click)="listar()"><i class="fas fa-table"></i> ListarCidades</button>
