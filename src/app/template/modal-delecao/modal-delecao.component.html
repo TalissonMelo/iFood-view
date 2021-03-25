@@ -5,12 +5,11 @@
                 <h5 class="modal-title">Confirmar Deleção</h5>
             </div>
             <div class="modal-body" *ngIf="objeto">
-                <p>Realmente deseja deletar a cidade de: <strong>{{ objeto.nome }} ? </strong> </p>
+                <p>Realmente deseja deletar: <strong>{{ objeto.nome }} ? </strong> </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success"><i class="fas fa-trash"></i> Confirmar</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i
-                        class="fa fa-arrow-alt-circle-left"></i> Cancelar</button>
+                <button type="button" (click)="emitirDelecao(objeto.id)" class="btn btn-success" data-dismiss="modal"><i class="fas fa-trash"></i> Confirmar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-arrow-alt-circle-left"></i> Cancelar</button>
             </div>
         </div>
     </div>

@@ -22,4 +22,12 @@ export class CidadeComponent implements OnInit {
   preparaDelecao(cidade : Cidade){
     this.cidade = cidade;
   }
+
+  deletar(id: number): void {
+    this.service.deletar(id).subscribe(() =>{
+      let index: number = this.cidades.findIndex((cidade) => cidade.id == id);
+      this.cidades.splice(index);
+    });
+    
+  }
 }

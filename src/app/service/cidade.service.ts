@@ -18,4 +18,8 @@ export class CidadeService {
   listarCidadeId(id:number): Observable<Cidade> {
     return this.http.get<Cidade>(`${environment.uri}/cidades/${id}`);
   }
+
+  deletar(id: number) : Observable<any> {
+    return this.http.delete<any>(`${environment.uri}/cidades/${id}`);
+  }
 }
