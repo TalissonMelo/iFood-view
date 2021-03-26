@@ -9,6 +9,7 @@ import { CidadeService } from 'src/app/service/cidade.service';
 export class CidadeComponent implements OnInit {
   public cidades: Cidade[] = [];
   public cidade: Cidade;
+  public erroDelcao: string;
 
   constructor(private service: CidadeService) { }
 
@@ -27,6 +28,9 @@ export class CidadeComponent implements OnInit {
     this.service.deletar(id).subscribe(() =>{
       let index: number = this.cidades.findIndex((cidade) => cidade.id == id);
       this.cidades.splice(index);
+      this.erroDelcao = null;
+    }, error => {
+      this.erroDelcao = error.error.detalhe;
     });
     
   }

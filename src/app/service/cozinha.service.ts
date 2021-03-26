@@ -14,4 +14,8 @@ export class CozinhaService {
   listar(): Observable<Cozinha[]> {
     return this.http.get<Cozinha[]>(`${environment.uri}/cozinhas`);
   }
+  
+  deletar(id: number) : Observable<any> {
+    return this.http.delete<any>(`${environment.uri}/cozinhas/${id}`);
+  }
 }

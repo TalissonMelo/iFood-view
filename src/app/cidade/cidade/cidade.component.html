@@ -6,6 +6,9 @@
     <button type="button" class="btn btn-success" [routerLink]="['/cidade/frm']"><i class="fa fa-save"></i> CadastrarCidades</button>
   </div>
 </nav>
+<div *ngIf="erroDelcao" class="alert alert-danger mt-3" role="alert">
+  {{ erroDelcao }}
+</div>
 <table class="table mt-1">
   <thead class="thead-dark">
     <tr class="row">
