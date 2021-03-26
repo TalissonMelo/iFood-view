@@ -22,4 +22,8 @@ export class CidadeService {
   deletar(id: number) : Observable<any> {
     return this.http.delete<any>(`${environment.uri}/cidades/${id}`);
   }
+
+  adicionar(cidade: Cidade): Observable<Cidade> {
+    return this.http.post<Cidade>(`${environment.uri}/cidades`, cidade);
+  }
 }

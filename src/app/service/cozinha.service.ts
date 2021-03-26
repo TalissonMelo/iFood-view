@@ -22,4 +22,8 @@ export class CozinhaService {
   deletar(id: number) : Observable<any> {
     return this.http.delete<any>(`${environment.uri}/cozinhas/${id}`);
   }
+
+  adicionar(cozinha: Cozinha): Observable<Cozinha> {
+    return this.http.post<Cozinha>(`${environment.uri}/cozinhas`, cozinha);
+  }
 }
