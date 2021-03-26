@@ -20,18 +20,18 @@ export class CidadeComponent implements OnInit {
     this.service.listar().subscribe((res) => this.cidades = res);
   }
 
-  preparaDelecao(cidade : Cidade){
+  preparaDelecao(cidade: Cidade) {
     this.cidade = cidade;
   }
 
   deletar(id: number): void {
-    this.service.deletar(id).subscribe(() =>{
+    this.service.deletar(id).subscribe(() => {
       let index: number = this.cidades.findIndex((cidade) => cidade.id == id);
-      this.cidades.splice(index);
+      this.cidades.splice(index, 1);
       this.erroDelcao = null;
     }, error => {
       this.erroDelcao = error.error.detalhe;
     });
-    
+
   }
 }

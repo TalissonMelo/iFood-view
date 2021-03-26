@@ -13,9 +13,4 @@ export class PermissaoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  listar(): void {
-    this.permissoes = this.service.permissoes();
-  }
-
 }

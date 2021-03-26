@@ -20,14 +20,14 @@ export class CozinhaComponent implements OnInit {
     this.service.listar().subscribe(res => this.cozinhas = res)
   }
 
-  preparaDelecao(cozinha : Cozinha){
+  preparaDelecao(cozinha: Cozinha) {
     this.cozinha = cozinha;
   }
 
   deletar(id: number): void {
-    this.service.deletar(id).subscribe(() =>{
+    this.service.deletar(id).subscribe(() => {
       let index: number = this.cozinhas.findIndex((cozinha) => cozinha.id == id);
-      this.cozinhas.splice(index);
+      this.cozinhas.splice(index, 1);
     }, error => {
       this.erroDelcao = error.error.detalhe;
     });
