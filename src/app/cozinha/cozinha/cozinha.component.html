@@ -20,7 +20,7 @@
     <tbody>
       <tr class="row" *ngFor="let cozinha of cozinhas">
         <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10">{{ cozinha.nome }}</td>
-        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning" routerLink="/cozinha/frm/{{cozinha.id}}"><i class="fas fa-edit"></i></button></td>
       <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger" (click)="preparaDelecao(cozinha)" data-toggle="modal"data-target="#modalDelecao"><i class="fas fa-trash"></i></button></td>
     </tr>
     </tbody>

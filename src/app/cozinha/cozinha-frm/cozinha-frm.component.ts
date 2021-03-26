@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Params, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Cozinha } from 'src/app/entidades/cozinha';
+import { CozinhaService } from 'src/app/service/cozinha.service';
 
 @Component({
   selector: 'app-cozinha-frm',
@@ -10,12 +13,21 @@ export class CozinhaFrmComponent implements OnInit {
   public validaCozinha: boolean;
   public sucesso: string = "Cozinha cadastrada com sucesso.";
   public erro: string = "Nome e Obrigatório, deve conter no mínimo 5 caracteres."
+  public id: number;
 
-  constructor() { 
+  constructor(private service: CozinhaService, private activatedRoute: ActivatedRoute) { 
     this.cozinha = new Cozinha();
   }
 
   ngOnInit(): void {
+    let params : Observable<Params> = this.activatedRoute.params;
+    params.subscribe(url => {
+      this.id = url['id'];
+      if(this.id){
+        this.service.listarCozinhaId(this.id).subscribe(res => this.cozinha = res);
+      }
+    });
+
   }
 
   salvar(): void {

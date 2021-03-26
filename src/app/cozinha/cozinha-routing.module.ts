@@ -10,6 +10,7 @@ const routes: Routes = [
     path: 'cozinha', component: LayoutComponent, children: [
       { path: "lista", component: CozinhaComponent },
       { path: "frm", component: CozinhaFrmComponent },
+      { path: "frm/:id", component: CozinhaFrmComponent },
       { path: '', redirectTo: "/cozinha/lista", pathMatch: 'full' }
     ]
   },
