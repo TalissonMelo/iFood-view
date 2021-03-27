@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Params, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Cozinha } from 'src/app/entidades/cozinha';
 import { CozinhaService } from 'src/app/service/cozinha.service';
@@ -15,23 +15,33 @@ export class CozinhaFrmComponent implements OnInit {
   public erro: string = "Nome e Obrigatório, deve conter no mínimo 5 caracteres."
   public id: number;
 
-  constructor(private service: CozinhaService, private activatedRoute: ActivatedRoute) { 
+  constructor(private service: CozinhaService, private activatedRoute: ActivatedRoute) {
     this.cozinha = new Cozinha();
   }
 
   ngOnInit(): void {
-    let params : Observable<Params> = this.activatedRoute.params;
+    let params: Observable<Params> = this.activatedRoute.params;
     params.subscribe(url => {
       this.id = url['id'];
-      if(this.id){
+      if (this.id) {
         this.service.listarCozinhaId(this.id).subscribe(res => this.cozinha = res);
       }
     });
 
   }
 
+  atualizar(): void {
+    if (this.validarCozinha()) {
+      this.service.atualizar(this.cozinha.id, this.cozinha).subscribe(res => {
+        this.validaCozinha = true;
+      }, error => {
+        this.validaCozinha = false;
+      })
+    }
+  }
+
   salvar(): void {
-    if(this.validarCozinha()){
+    if (this.validarCozinha()) {
       this.service.adicionar(this.cozinha).subscribe(res => {
         this.validaCozinha = true;
       }, error => {

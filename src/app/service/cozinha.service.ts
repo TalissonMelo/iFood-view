@@ -26,4 +26,8 @@ export class CozinhaService {
   adicionar(cozinha: Cozinha): Observable<Cozinha> {
     return this.http.post<Cozinha>(`${environment.uri}/cozinhas`, cozinha);
   }
+
+  atualizar(id: number, cozinha: Cozinha): Observable<Cozinha> {
+    return this.http.put<Cozinha>(`${environment.uri}/cozinhas/${id}`, cozinha);
+  }
 }

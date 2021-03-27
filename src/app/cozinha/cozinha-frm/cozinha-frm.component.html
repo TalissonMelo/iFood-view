@@ -8,6 +8,7 @@
       <label for="nome">Nome</label>
       <input type="text" class="form-control" id="nome" placeholder="Digite o nome da cozinha" [(ngModel)]="cozinha.nome" name="nome">
     </div>
-    <button type="submit" class="btn btn-success" (click)="salvar()"><i class="fa fa-save"></i> Cadastrar</button>
+    <button *ngIf="cozinha.id" type="submit" class="btn btn-success" (click)="atualizar()"><i class="fa fa-save"></i> Atualizar</button>
+    <button *ngIf="!cozinha.id"  type="submit" class="btn btn-success" (click)="salvar()"><i class="fa fa-save"></i> Cadastrar</button>
     <button type="button" class="btn btn-dark ml-2" [routerLink]="['/cozinha']">Listar Cozinha</button>
 </form>
