@@ -32,7 +32,11 @@ export class CozinhaFrmComponent implements OnInit {
 
   salvar(): void {
     if(this.validarCozinha()){
-      this.validaCozinha = true;
+      this.service.adicionar(this.cozinha).subscribe(res => {
+        this.validaCozinha = true;
+      }, error => {
+        this.validaCozinha = false;
+      })
     }
   }
 
