@@ -14,4 +14,8 @@ export class EstadoService {
   listar(): Observable<Estado[]> {
     return this.http.get<Estado[]>(`${environment.uri}/estados`);
   }
+
+  listarEstadoId(id: number): Observable<Estado> {
+    return this.http.get<Estado>(`${environment.uri}/estados/${id}`);
+  }
 }
