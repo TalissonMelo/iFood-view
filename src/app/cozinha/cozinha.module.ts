@@ -17,9 +17,6 @@ import { FormsModule } from '@angular/forms';
     CozinhaRoutingModule,
     TemplateModule,
     FormsModule,
-  ], exports: [
-    CozinhaFrmComponent, 
-    CozinhaComponent
   ]
 })
 export class CozinhaModule { }

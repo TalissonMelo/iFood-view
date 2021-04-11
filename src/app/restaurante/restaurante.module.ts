@@ -9,9 +9,6 @@ import { RestauranteRoutingModule } from './resturante-routing.module';
   imports: [
     CommonModule,
     RestauranteRoutingModule
-  ], exports : [
-    RestauranteComponent,
-    RestauranteFrmComponent
   ]
 })
 export class RestauranteModule { }

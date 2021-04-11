@@ -9,9 +9,6 @@ import { ProdutoRoutingModule } from './produto-routing.module';
   imports: [
     CommonModule,
     ProdutoRoutingModule
-  ], exports: [
-    ProdutoComponent,
-    ProdutoFrmComponent
   ]
 })
 

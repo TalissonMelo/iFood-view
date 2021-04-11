@@ -9,9 +9,6 @@ import { GrupoRoutingModule } from './grupo-routing.module'
   imports: [
     CommonModule,
     GrupoRoutingModule
-    ], exports: [
-    GrupoComponent,
-    GrupoFrmComponent
-  ]
+    ]
 })
 export class GrupoModule { }

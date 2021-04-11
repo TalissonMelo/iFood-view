@@ -12,9 +12,6 @@ import { PedidoRoutingModule } from './pedido.routing.module'
   imports: [
     CommonModule,
     PedidoRoutingModule
-  ], exports: [
-    PedidoComponent,
-    PedidoFrmComponent
   ]
 })
 export class PedidoModule { }

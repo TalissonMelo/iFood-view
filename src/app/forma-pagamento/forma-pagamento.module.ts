@@ -17,9 +17,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     FormaPagamentoRoutingModule,
     TemplateModule
-  ], exports : [
-    FormaPagamentoComponent,
-    FormaPagamentoFrmComponent
   ]
 })
 export class FormaPagamentoModule { }

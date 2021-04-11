@@ -16,9 +16,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     CidadeRoutingModule,
     TemplateModule
-  ], exports : [
-    CidadeComponent,
-    CidadeFrmComponent
   ]
 })
 export class CidadeModule { }

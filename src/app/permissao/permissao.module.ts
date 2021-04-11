@@ -16,9 +16,6 @@ imports: [
   PermissaoRoutingModule,
   TemplateModule,
   FormsModule
-],exports: [
-  PermissaoComponent,
-  PermissaoFrmComponent
 ]
 })
 export class PermissaoModule { }
