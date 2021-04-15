@@ -1,7 +1,7 @@
 <nav class="nav nav-pills nav-fill">
     <h1>Permissões</h1>
     <div class="input-group">
-        <button type="button" class="btn btn-primary mr-2">Listar Permissões</button>
+        <button type="button" class="btn btn-primary mr-2" (click)="listar()">Listar Permissões</button>
         <button type="button" class="btn btn-success" [routerLink]="['/permissao/frm']">Cadastrar Permissões</button>
     </div>
   </nav>
@@ -15,9 +15,9 @@
     </tr>
     </thead>
     <tbody>
-      <tr class="row">
-        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></td>
-        <td class="col-xs-7 col-sm-7 col-md-7 col-lg-7"></td>
+      <tr class="row" *ngFor="let permissao of permissoes">
+        <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">{{ permissao.nome }}</td>
+        <td class="col-xs-7 col-sm-7 col-md-7 col-lg-7">{{ permissao.descricao }}</td>
         <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning" ><i class="fas fa-edit"></i></button></td>
         <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger" data-toggle="modal"data-target="#modalDelecao"><i class="fas fa-trash"></i></button></td>
     </tr>

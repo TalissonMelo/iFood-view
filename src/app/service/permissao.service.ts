@@ -1,9 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Permissao } from '../entidades/permissao';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PermissaoService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  listar(): Observable<Permissao[]> {
+    return this.http.get<Permissao[]>(`${environment.uri}/permissoes`);
+  }
 }
