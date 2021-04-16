@@ -1,10 +1,14 @@
 <nav class="nav nav-pills nav-fill">
+  <app-modal-delecao [objeto]="permissao" (deletar)="deletar($event)"></app-modal-delecao>
     <h1>Permissões</h1>
     <div class="input-group">
         <button type="button" class="btn btn-primary mr-2" (click)="listar()">Listar Permissões</button>
         <button type="button" class="btn btn-success" [routerLink]="['/permissao/frm']">Cadastrar Permissões</button>
     </div>
   </nav>
+  <div *ngIf="erroDelcao" class="alert alert-danger mt-3" role="alert">
+    {{ erroDelcao }}
+  </div>
 <table class="table mt-1">
     <thead class="thead-dark">
       <tr class="row">
@@ -18,8 +22,8 @@
       <tr class="row" *ngFor="let permissao of permissoes">
         <td class="col-xs-3 col-sm-3 col-md-3 col-lg-3">{{ permissao.nome }}</td>
         <td class="col-xs-7 col-sm-7 col-md-7 col-lg-7">{{ permissao.descricao }}</td>
-        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning" ><i class="fas fa-edit"></i></button></td>
-        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger" data-toggle="modal"data-target="#modalDelecao"><i class="fas fa-trash"></i></button></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+        <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger" data-toggle="modal"data-target="#modalDelecao" (click)="preparaDelecao(permissao)"><i class="fas fa-trash"></i></button></td>
     </tr>
     </tbody>
 </table>

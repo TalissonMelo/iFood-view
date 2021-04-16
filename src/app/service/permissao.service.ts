@@ -14,4 +14,8 @@ export class PermissaoService {
   listar(): Observable<Permissao[]> {
     return this.http.get<Permissao[]>(`${environment.uri}/permissoes`);
   }
+
+  deletar(id: number) : Observable<any> {
+    return this.http.delete<any>(`${environment.uri}/permissoes/${id}`);
+  }
 }
