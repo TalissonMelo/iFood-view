@@ -9,6 +9,7 @@ const routes: Routes = [
     path: 'permissao', component: LayoutComponent, children: [
       { path: "lista", component: PermissaoComponent },
       { path: "frm", component: PermissaoFrmComponent },
+      { path: "frm/:id", component: PermissaoFrmComponent },
       { path: '', redirectTo: "/permissao/lista", pathMatch: 'full' }
     ]
   },

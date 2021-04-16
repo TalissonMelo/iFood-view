@@ -27,7 +27,6 @@ export class CozinhaFrmComponent implements OnInit {
         this.service.listarCozinhaId(this.id).subscribe(res => this.cozinha = res);
       }
     });
-
   }
 
   atualizar(): void {
