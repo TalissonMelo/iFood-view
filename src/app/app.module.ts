@@ -19,6 +19,8 @@ import { TemplateModule } from './template/template.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { FormaPagamentoService } from './service/formaPagamento';
+import { EstadoService } from './service/estado.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { LayoutComponent } from './layout/layout.component';
   providers: [
     CidadeService, 
     CozinhaService,
-    PermissaoService
+    PermissaoService,
+    FormaPagamentoService,
+    EstadoService
   ],
   bootstrap: [AppComponent]
 })
