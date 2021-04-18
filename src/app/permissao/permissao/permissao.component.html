@@ -2,8 +2,8 @@
   <app-modal-delecao [objeto]="permissao" (deletar)="deletar($event)"></app-modal-delecao>
     <h1>Permissões</h1>
     <div class="input-group">
-        <button type="button" class="btn btn-primary mr-2" (click)="listar()">Listar Permissões</button>
-        <button type="button" class="btn btn-success" [routerLink]="['/permissao/frm']">Cadastrar Permissões</button>
+        <button type="button" class="btn btn-primary mr-2" (click)="listar()"><i class="fas fa-table"></i> Listar Permissões</button>
+        <button type="button" class="btn btn-success" [routerLink]="['/permissao/frm']"><i class="fa fa-save"></i> Cadastrar Permissões</button>
     </div>
   </nav>
   <div *ngIf="erroDelcao" class="alert alert-danger mt-3" role="alert">

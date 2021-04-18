@@ -1,1 +1,24 @@
-<p>restaurante works!</p>
+<nav class="nav nav-pills nav-fill">
+    <h1>Restaurantes</h1>
+    <div class="input-group">
+      <button type="button" class="btn btn-primary mr-2"><i class="fas fa-table"></i> Listar Restaurantes</button>
+      <button type="button" class="btn btn-success" [routerLink]="['/restaurante/frm']"><i class="fa fa-save"></i> Cadastrar Restaurantes</button>
+    </div>
+  </nav>
+  <table class="table mt-1">
+    <thead class="thead-dark">
+      <tr class="row">
+        <th class="col-xs-10 col-sm-10 col-md-10 col-lg-10">Restaurantes</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Editar</th>
+        <th class="col-xs-1 col-sm-1 col-md-1 col-lg-1">Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="row">
+            <td class="col-xs-10 col-sm-10 col-md-10 col-lg-10"></td>
+            <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+            <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1"><button class="btn btn-danger" data-toggle="modal"data-target="#modalDelecao"><i class="fas fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+  </table>
+  <app-paginacao></app-paginacao>
