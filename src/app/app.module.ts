@@ -20,7 +20,8 @@ import { UsuarioModule } from './usuario/usuario.module';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 import { FormaPagamentoService } from './service/formaPagamento';
-import { EstadoService } from './service/estado.service';
+import {  RestauranteService } from './service/estado.service';
+import { EstadoService } from './service/restaurante.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { EstadoService } from './service/estado.service';
     CozinhaService,
     PermissaoService,
     FormaPagamentoService,
-    EstadoService
+    EstadoService,
+    RestauranteService
   ],
   bootstrap: [AppComponent]
 })

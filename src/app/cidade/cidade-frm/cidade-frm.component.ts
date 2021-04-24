@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Cidade } from 'src/app/entidades/cidade';
 import { Estado } from 'src/app/entidades/estado';
 import { CidadeService } from 'src/app/service/cidade.service';
-import { EstadoService } from 'src/app/service/estado.service';
+import { EstadoService } from 'src/app/service/restaurante.service';
 
 @Component({
   selector: 'app-cidade-frm',
